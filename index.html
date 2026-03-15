@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevCraft Studio — Software Development & AI Solutions</title>
+  <meta name="description" content="We build production-grade software with AI-native features. From MVPs to enterprise platforms — fast, reliable, obsessively crafted." />
+  <meta name="keywords" content="software development, web apps, mobile apps, AI integration, India, Bangalore" />
+  <meta property="og:title" content="DevCraft Studio — Software Development & AI Solutions" />
+  <meta property="og:description" content="We build software that scales. 120+ projects shipped." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="logo"><span class="accent">Dev</span>Craft<span class="logo-dot">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#ai-agent">AI Agent</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="scrollToSection('ai-agent')">Get Proposal</button>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services"   onclick="closeMobileMenu()">Services</a>
+      <a href="#portfolio"  onclick="closeMobileMenu()">Portfolio</a>
+      <a href="#pricing"    onclick="closeMobileMenu()">Pricing</a>
+      <a href="#ai-agent"   onclick="closeMobileMenu()">AI Agent</a>
+      <a href="#contact"    onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Projects &nbsp;·&nbsp; India &amp; Global
+      </div>
+      <h1 class="hero-title">
+        We Build Software<br>
+        <span class="accent">That Scales</span>.
+      </h1>
+      <p class="hero-desc">
+        From MVPs to enterprise platforms — we architect, design, and ship
+        production-grade software with AI-native features. Fast. Reliable. Obsessively crafted.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToSection('ai-agent')">Start Your Project →</button>
+        <button class="btn-outline" onclick="scrollToSection('portfolio')">View Our Work</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">120+</div><div class="stat-label">Projects Shipped</div></div>
+        <div class="stat"><div class="stat-num">8yr</div><div class="stat-label">Experience</div></div>
+        <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Client Retention</div></div>
+        <div class="stat"><div class="stat-num">₹50Cr+</div><div class="stat-label">Revenue Generated</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECH TICKER ── -->
+  <div class="tech-ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <div class="divider"></div>
+
+  <!-- ── SERVICES ── -->
+  <section class="section" id="services">
+    <div class="section-inner">
+      <div class="section-label"><span></span>What We Build</div>
+      <h2 class="section-title">End-to-End Software Services</h2>
+      <p class="section-lead">From initial architecture to production deployment, we handle every layer of your product.</p>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ── PORTFOLIO ── -->
+  <section class="section" id="portfolio">
+    <div class="section-inner">
+      <div class="section-label"><span></span>Our Work</div>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-lead">Real products. Real clients. Real impact.</p>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ── PRICING ── -->
+  <section class="section" id="pricing">
+    <div class="section-inner">
+      <div class="section-label"><span></span>Transparent Pricing</div>
+      <h2 class="section-title">Investment Plans</h2>
+      <p class="section-lead">No hidden costs. No surprises. Just great software.</p>
+      <div class="pricing-grid" id="pricingGrid"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="section" id="testimonials">
+    <div class="section-inner">
+      <div class="section-label"><span></span>Social Proof</div>
+      <h2 class="section-title">What Clients Say</h2>
+      <div class="testimonials-grid" id="testimonialsGrid"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ── AI AGENT ── -->
+  <section class="ai-section" id="ai-agent">
+    <div class="ai-glow"></div>
+    <div class="ai-container">
+      <div class="section-label" style="justify-content:center"><span></span>AI-Powered Onboarding</div>
+      <h2 class="section-title">Get Your Project Proposal</h2>
+      <p class="section-lead">Chat with ARIA, our AI Requirements Agent. She'll gather your details and generate a custom proposal + invoice in minutes.</p>
+
+      <div class="steps-bar" id="stepsBar"></div>
+
+      <div class="ai-chat" id="aiChat">
+        <div class="chat-header">
+          <div class="agent-dot"></div>
+          <div>
+            <div class="chat-title">ARIA — AI Requirements Agent</div>
+            <div class="chat-sub">Online · Powered by Claude AI</div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area">
+          <input class="chat-input" id="chatInput" type="text" placeholder="Type your answer..." />
+          <button class="chat-send" id="chatSend" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+
+      <div class="proposal" id="proposalBox" style="display:none;"></div>
+      <div class="invoice-wrap" id="invoiceWrap" style="display:none;"></div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+  <!-- ── CONTACT ── -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label"><span></span>Get In Touch</div>
+          <h2 class="section-title" style="font-size:2.2rem;">Ready to Build Something Great?</h2>
+          <p style="color:var(--muted);line-height:1.7;margin-bottom:2.5rem;">
+            Have a project in mind? Let's talk. We'll get back to you within 4 business hours.
+          </p>
+          <div class="contact-items" id="contactItems"></div>
+        </div>
+        <div id="contactFormWrap">
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="cfName" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="cfEmail" placeholder="john@company.com" />
+            </div>
+            <div class="form-group">
+              <label>Budget Range</label>
+              <select id="cfBudget">
+                <option value="">Select budget...</option>
+                <option>Under ₹1L</option>
+                <option>₹1L – ₹5L</option>
+                <option>₹5L – ₹20L</option>
+                <option>₹20L+</option>
+                <option>Let's Discuss</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Project Brief</label>
+              <textarea id="cfMessage" rows="4" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button class="btn-primary" style="width:100%" onclick="submitContact()">Send Message →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="font-size:1.5rem;margin-bottom:1rem;"><span class="accent">Dev</span>Craft Studio</div>
+          <p>We build software that scales. From MVPs to enterprise systems — shipped fast, built right.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="GitHub">⌥</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Applications</a></li>
+            <li><a href="#services">Mobile Apps</a></li>
+            <li><a href="#services">AI Integration</a></li>
+            <li><a href="#services">APIs & Backend</a></li>
+            <li><a href="#services">Cloud & DevOps</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 DevCraft Studio. All rights reserved. GST: 29ABCDE1234F1Z5</p>
+        <p>Made with ⚡ in Bangalore, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS — load order matters -->
+  <script src="js/data.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/agent.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/invoice.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
